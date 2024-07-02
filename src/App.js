@@ -2,20 +2,20 @@ import React, { useEffect, useState } from "react";
 import {useNavigate} from 'react-router-dom'
 import "./App.css";
 import StudentPortal, { loader as infocardloader } from "./pages/student_portal/home/StudentPortal.js";
-import Login from "./login/StudentLogin.js";
-import Mainlogin from "./login/mainlogin.js";
+import Login from "./pages/Login/StudentLogin.js";
+import Mainlogin from "./pages/Login/mainlogin.js";
 import { RouterProvider, Route, createBrowserRouter, createRoutesFromElements, Routes, Navigate } from "react-router-dom";
-import About from "./pages/first_page/About.js";
+import About from "./pages/Home Page/About.js";
 import Table from "./pages/student_portal/application/Application.js";
 import Notification from "./pages/student_portal/notification/Notification.js";
 import { AvatarMenue } from "./pages/student_portal/student_profile/account.js";
 import axios from "axios";
 import { cookieSplitter } from "./pages/student_portal/utils";
-import AlumniTPO from "./pages/alumniPage/alumni_tpo.js";
-import RootHomePage from "./pages/first_page/RootHomePage.jsx"
+import AlumniTPO from "./pages/Alumni Pages/Alumni TPO/alumni_tpo.js";
+import RootHomePage from "./pages/Home Page/RootHomePage.jsx"
 import TpoRoot from "./pages/TPO/TpoRoot.js";
 
-import HR from "./pages/HR";
+import HR from "./pages/TPO/HR.js";
 
 function App() {
   const [login, setlogin] = useState(false);

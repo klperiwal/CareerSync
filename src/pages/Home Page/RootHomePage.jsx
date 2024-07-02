@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SharedLayout from './SharedLayout';
-import AlumniPublic from '../alumniPage/alumni_for_public';
-import HomePage from "./AppPage";
+import AlumniPublic from '../Alumni Pages/alumni_for_public';
+import HomePage from "./Home_front";
 import AboutPage from "./About";
 
 const RootHomePage = () => {

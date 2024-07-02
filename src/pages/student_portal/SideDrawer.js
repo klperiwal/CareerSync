@@ -11,7 +11,7 @@ import img2 from "../../assets/Option2.svg";
 import img3 from "../../assets/Option3.svg";
 import img4 from "../../assets/Option4.svg";
 import img5 from "../../assets/Option5.svg";
-import YourComponent from "./home/YourComponent";
+import LoginChecker from "./home/LoginChecker";
 import Backdrop from "../../components/backgrop";
 
 const SideDrawer = ({setLogin}) => {
@@ -54,7 +54,7 @@ const SideDrawer = ({setLogin}) => {
         <OptionCard optionImage={img5} optionLabel={"Profile"} collapsed={collapsed} />
       </Link>
 
-      <YourComponent collapsed={collapsed} setLogin={setLogin} />
+      <LoginChecker collapsed={collapsed} setLogin={setLogin} />
     </div>
   </div>
 </div>

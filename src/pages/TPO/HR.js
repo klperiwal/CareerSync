@@ -1,9 +1,9 @@
 import { useEffect, useState, useRef } from "react";
 import "./HR.css";
 import axios from "axios";
-import { cookieSplitter } from "./student_portal/utils";
+import { cookieSplitter } from "../student_portal/utils";
 import MarkDown  from 'react-markdown'
-import LC from '../assets/lc.png'
+import LC from '../../assets/lc.png'
 
 function C1({ item }) {
   // console.log("insdie c1 ", item);

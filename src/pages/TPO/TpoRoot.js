@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import AlumniTPO from '../alumniPage/alumni_tpo';
+import AlumniTPO from '../Alumni Pages/Alumni TPO/alumni_tpo';
 import Header from "./header";
-import HR from '../HR';
+import HR from './HR';
 
 
 

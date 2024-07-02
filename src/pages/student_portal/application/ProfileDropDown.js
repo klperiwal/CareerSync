@@ -10,11 +10,13 @@ export const ProfileDropDown = (props) => {
       if (!profileRef.current.contains(e.target)) setState(false);
     };
     document.addEventListener("click", handleDropDown);
+    return () => {
+      document.removeEventListener("click", handleDropDown);
+    };
   }, []);
 
   return (
     <>
-
       <div className={`relative ${props.class}`}>
         <div className="flex items-center space-x-4">
           <button
@@ -24,30 +26,19 @@ export const ProfileDropDown = (props) => {
           >
             <img
               src="https://randomuser.me/api/portraits/men/46.jpg"
-              className="w-full h-full rounded-full" />
+              className="w-full h-full rounded-full"
+              alt="Profile"
+            />
           </button>
-          <div className="lg:hidden">
-            <span className="block">Micheal John</span>
-            <span className="block text-sm text-gray-500">john@gmail.com</span>
-          </div>
         </div>
-        {/* <ul
-              className={`bg-white top-12 right-0 mt-5 space-y-5 lg:absolute lg:border lg:rounded-md lg:text-sm lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${
-                state ? "" : "lg:hidden"
-              }`}
-            >
-              {navigation.map((item, idx) => (
-                <li>
-                  <a
-                    key={idx}
-                    className="block text-gray-600 lg:hover:bg-gray-50 lg:p-2.5"
-                    href={item.path}
-                  >
-                    {item.title}
-                  </a>
-                </li>
-              ))}
-            </ul> */}
+        {state && (
+          <div className="absolute mt-2 w-48 bg-white rounded-lg shadow-lg z-10">
+            <ul className="py-1">
+              <li className="cursor-pointer px-2 py-2 hover:bg-gray-100">Profile</li>
+              <li className="cursor-pointer px-2 py-2 hover:bg-gray-100">Company Applied</li>
+            </ul>
+          </div>
+        )}
       </div>
     </>
   );
